@@ -94,7 +94,7 @@ If you're assigned the *Authentication Administrator* role, you can require user
    - **Reset Password** resets the user's password and assigns a temporary password that must be changed on the next sign-in.
    - **Require Re-register MFA** makes it so that when the user signs in next time, they're requested to set up a new MFA authentication method.
       > [!NOTE]
-      > The user's currently registered authentication methods aren't deleted when an admin requires re-registration for MFA. After a user re-registers for MFA, we recommend they review their security info and delete any previously registered authentication methods that are no longer usable.
+      > Requesting MFA re-enrollment by the administrator will completely remove the user's currently registered authentication methods (Authenticator App, phone number, software OATH), but will not remove the FIDO 2.0 security key, email address, Windows Hello for Business, certificates used for certificate-based authentication, and temporary access passes will not be removed.
    - **Revoke MFA Sessions** clears the user's remembered MFA sessions and requires them to perform MFA the next time it's required by the policy on the device.
    
     :::image type="content" source="media/howto-mfa-userdevicesettings/manage-authentication-methods-in-azure.png" alt-text="Manage authentication methods from the Azure portal":::
